@@ -1,0 +1,82 @@
+// ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+// variables
+// ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+
+//カラー設定
+$blackColor: #000;
+$whiteColor: #fff;
+$grayColor: #3F312B;
+$accentColor: #661614;
+$subColor: #541818;
+$bgColor: #f9f3f2;
+$defaultFontColor: #221714;
+$linkColor: #000;
+$transparent: rgba(0, 0, 0, 0);
+
+//フォント設定
+$h1FontSize: 2.2rem;
+$h2FontSize: 2rem;
+$h3FontSize: 1.8rem;
+$defaultFontSize: 1.6rem;
+$smallFontSize: 1.4rem;
+$minimumFontSize: 1.2rem;
+
+//border-radius
+$borderRadius: 3px;
+
+//transition
+$transition_5s: .5s;
+
+//opcity
+$opacity: .5;
+
+//米印インデント調整
+@mixin indent {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+//最大横幅設定
+@mixin width {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+//横並び設定
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+//ブレイクポイント設定
+$breakPoints: (
+  //モバイルファースト
+    'sp_middle': 'screen and (min-width: 768px)',
+    'sp_large': 'screen and (min-width: 1000px)',
+  //PCファースト
+    'pc_small': 'screen and (max-width: 320px)',
+    'pc_middle': 'screen and (max-width: 768px)'
+);
+@mixin mq($breakPoint) {
+  @media #{map-get($breakPoints, $breakPoint)} {
+    @content;
+  }
+}
+
+//スタイルデバッグ設定
+@mixin debug() {
+  body * {
+    outline: 1px dotted rgba(255, 0, 0, 0.2)!important;
+  }
+  body * * {
+    outline: 1px dotted rgba(0, 128, 0, 0.2)!important;
+  }
+  body * * * {
+    outline: 1px dotted rgba(255, 165, 0, 0.2)!important;
+  }
+  body * * * * {
+    outline: 1px dotted rgba(0, 0, 255, 0.2)!important;
+  }
+}
