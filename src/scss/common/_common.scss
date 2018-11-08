@@ -42,6 +42,10 @@ a {
   display: inline-block;
   text-decoration: none;
   transition: $transition_5s;
+  color: $linkColor;
+  &:hover {
+
+  }
 }
 
 img {

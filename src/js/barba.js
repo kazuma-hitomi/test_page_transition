@@ -1,6 +1,13 @@
 import $ from 'jquery';
 import Barba from 'barba.js'
 
+export const barba = () => {
+  Barba.Pjax.start();
+  Barba.Pjax.getTransition = () => {
+    return FadeTransition;
+  };
+};
+
 const FadeTransition = Barba.BaseTransition.extend({
   start: function() {
     Promise
@@ -25,10 +32,3 @@ const FadeTransition = Barba.BaseTransition.extend({
     });
   }
 });
-
-export const barba = () => {
-  Barba.Pjax.start();
-  Barba.Pjax.getTransition = () => {
-    return FadeTransition;
-  };
-};

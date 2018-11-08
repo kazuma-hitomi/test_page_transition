@@ -6,11 +6,21 @@ html
   body
     header.header
       .header__inner
-        h1.header__title test page transition
+        h1.header__title.js-spring-target test page transition
     #barba-wrapper
       .barba-container
         main.main.main--01
           .main__inner
-            p.transition
+            p.transition.transition--01
               a(href="./index02.html") index02
+            p.main__img
+              img(src="https://www.dropbox.com/s/dl/3lxdmugmz90dxtp/36H.jpg")
+    footer.footer
+      h1.footer__title test page transition
+    span.js-mouse-pointer
+      span.in
+        span.b
+    .js-loading
+      svg(enable-background='new 0 0 50 50', viewBox='0 0 50 50', xmlns='http://www.w3.org/2000/svg')
+        path(d='m25 4c11.6 0 21 9.4 21 21s-9.4 21-21 21-21-9.4-21-21 9.4-21 21-21', stroke-miterlimit='10')
     script(src="./assets/js/app.js")
