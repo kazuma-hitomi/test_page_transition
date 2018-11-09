@@ -94,31 +94,65 @@
   }
 }
 
-.js-mouse-pointer {
-  opacity: 1;
+.site-logo-wrap {
   position: fixed;
+  top: 50px;
+  left: 80px;
   z-index: 100;
-  top: 0;
-  left: 0;
+  display: block
+}
+
+.site-logo-wrap span {
+  display: block
+}
+
+.site-logo-txt {
+  font-weight: 500;
+  letter-spacing: .08em;
+  color: #fff000
+}
+
+.site-logo .focus {
+  //position: absolute;
+  //width: 60px;
+  //height: 60px;
+  //background: #fff000;
+  //border-radius: 50%;
+  //top: -15px;
+  //left: -30px;
+  //mix-blend-mode: exclusion;
+  //z-index: 99999
+}
+
+.js-mouse-pointer,.js-mouse-pointer * {
+  pointer-events: none
+}
+
+.js-mouse-pointer {
   display: block;
   width: 14px;
   height: 14px;
+  position: fixed;
+  z-index: 101;
   margin: -7px 0 0 -7px;
-  .in {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    .b {
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: #fff000;
-      border-radius: 100%;
-      transition: all $transition_5s;
-    }
-  }
+  top: 0;
+  left: 0
+}
+
+.js-mouse-pointer .b {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background-color: #fff000;
+  box-sizing: border-box;
+  transition: all 0.2s
+}
+
+.js-mousedown .js-mouse-pointer .b,
+.js-hover .js-mouse-pointer .b {
+  transform: scale(0.5);
+  background-color: #4e1ebe
 }
 
 .js-loading {
@@ -137,6 +171,65 @@
     height: 100%;
     animation: spin 0.6s linear infinite forwards;
   }
+}
+
+.scroll-button span {
+  display: block
+}
+
+.scroll-button .t-body {
+  display: flex;
+  align-items: center
+}
+
+.scroll-button .i {
+  color: #4e1ebd;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 60px;
+  line-height: 60px;
+  transition: box-shadow 0.2s
+}
+
+.scroll-button .t {
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+  color: #fff000;
+  font-weight: 400;
+  letter-spacing: 0.1em
+}
+
+.scroll-down {
+  z-index: 3;
+  //right: 50px;
+  //bottom: 50px;
+  //position: absolute
+}
+
+.scroll-button .i {
+  box-shadow: inset 0px 0px 0px calc(60px/2) #fff000
+}
+
+.scroll-button:hover .i {
+  box-shadow: inset 0px 0px 0px 3px #fff000;
+  color: #fff000
+}
+
+.scroll-down {
+  transform: translate(100%,300%);
+  //opacity: 0
+}
+
+.scroll-button .t-body {
+  display: flex;
+  align-items: center
+}
+
+.unset,
+.unset .js-slidein,
+.unset .js-fadein {
+  transition: unset!important
 }
 
 @keyframes spin {

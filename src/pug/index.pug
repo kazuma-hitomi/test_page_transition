@@ -11,8 +11,20 @@ html
       .barba-container
         main.main.main--01
           .main__inner
-            p.transition.transition--01
-              a(href="./index02.html") index02
+            //a.js-splash(href="./index02.html")
+            //  span.js-spring
+            //    span.js-spring-target index02
+            a.site-logo-wrap.js-spring.js-splash(href='https://orf.sfc.keio.ac.jp/2018/')
+              span.in
+                span.site-logo.js-spring-target
+                  span.site-logo-txt
+                    span KEIO SFC
+                    span OPEN RESEARCH FORUM 2018
+                  span.focus
+            a.scroll-button.scroll-down.js-splash
+              span.js-spring
+                span.js-spring-target
+                  span.i.i-arrow-down
             p.main__img
               img(src="https://www.dropbox.com/s/dl/3lxdmugmz90dxtp/36H.jpg")
     footer.footer
@@ -20,7 +32,7 @@ html
     span.js-mouse-pointer
       span.in
         span.b
-    .js-loading
-      svg(enable-background='new 0 0 50 50', viewBox='0 0 50 50', xmlns='http://www.w3.org/2000/svg')
-        path(d='m25 4c11.6 0 21 9.4 21 21s-9.4 21-21 21-21-9.4-21-21 9.4-21 21-21', stroke-miterlimit='10')
+    //.js-loading
+    //  svg(enable-background='new 0 0 50 50', viewBox='0 0 50 50', xmlns='http://www.w3.org/2000/svg')
+    //    path(d='m25 4c11.6 0 21 9.4 21 21s-9.4 21-21 21-21-9.4-21-21 9.4-21 21-21', stroke-miterlimit='10')
     script(src="./assets/js/app.js")
