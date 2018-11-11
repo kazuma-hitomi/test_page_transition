@@ -127,7 +127,6 @@
 .js-mouse-pointer,.js-mouse-pointer * {
   pointer-events: none
 }
-
 .js-mouse-pointer {
   display: block;
   width: 14px;
@@ -138,7 +137,6 @@
   top: 0;
   left: 0
 }
-
 .js-mouse-pointer .b {
   display: block;
   height: 100%;
@@ -148,11 +146,28 @@
   box-sizing: border-box;
   transition: all 0.2s
 }
-
-.js-mousedown .js-mouse-pointer .b,
-.js-hover .js-mouse-pointer .b {
+.js-mousedown .js-mouse-pointer .b,.js-hover .js-mouse-pointer .b {
   transform: scale(0.5);
   background-color: #4e1ebe
+}
+.js-kwd-focus-before .js-mouse-pointer .b {
+  //opacity: 0
+}
+.js-mouse-pointer {
+  //opacity: 0;
+  transition: opacity 0.6s
+}
+.is-mv-loaded .js-mouse-pointer {
+  opacity: 1
+}
+.js-mouse-pointer {
+  //transform: matrix(1,0,0,1,-1000,-1000)
+}
+.is-device-mobile .js-mouse-pointer,.is-device-tablet .js-mouse-pointer {
+  //display: none
+}
+.site-nav-highlight,.js-mouse-pointer,.flex-layout-3col .button {
+  //display: none
 }
 
 .js-loading {
