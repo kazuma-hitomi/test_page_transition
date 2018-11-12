@@ -7,8 +7,8 @@ html
     header.header
       .header__inner
         h1.header__title.js-spring-target test page transition
-    #barba-wrapper
-      .barba-container
+    #tpt
+      .tpt__container
         main.main.main--01
           .main__inner
             a.site-logo-wrap.js-spring.js-splash(href='./index02.html')
@@ -21,14 +21,16 @@ html
               span.js-spring
                 span.js-spring-target
                   span.i.i-arrow-down
-            p.main__img
-              img(src="https://www.dropbox.com/s/dl/3lxdmugmz90dxtp/36H.jpg")
+            .main__img.img.loading
+              img.lazyload(
+              data-sizes='auto',
+              data-src='https://www.dropbox.com/s/dl/3lxdmugmz90dxtp/36H.jpg',
+              data-srcset='https://www.dropbox.com/s/dl/3lxdmugmz90dxtp/36H.jpg 300w,\
+              https://www.dropbox.com/s/dl/3lxdmugmz90dxtp/36H.jpg 600w,\
+              https://www.dropbox.com/s/dl/3lxdmugmz90dxtp/36H.jpg 900w')
     footer.footer
       h1.footer__title test page transition
     span.js-mouse-pointer
       span.in
         span.b
-    //.js-loading
-    //  svg(enable-background='new 0 0 50 50', viewBox='0 0 50 50', xmlns='http://www.w3.org/2000/svg')
-    //    path(d='m25 4c11.6 0 21 9.4 21 21s-9.4 21-21 21-21-9.4-21-21 9.4-21 21-21', stroke-miterlimit='10')
     script(src="./assets/js/app.js")

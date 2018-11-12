@@ -2,10 +2,12 @@ import $ from 'jquery';
 import Barba from 'barba.js'
 
 export const barba = () => {
-  Barba.Pjax.start();
+  Barba.Pjax.Dom.wrapperId = 'tpt';
+  Barba.Pjax.Dom.containerClass = 'tpt__container';
   Barba.Pjax.getTransition = () => {
     return FadeTransition;
   };
+  Barba.Pjax.start();
 };
 
 const FadeTransition = Barba.BaseTransition.extend({
