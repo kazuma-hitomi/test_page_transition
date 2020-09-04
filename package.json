@@ -6,7 +6,7 @@
   "devDependencies": {
     "autoprefixer": "^9.3.1",
     "browser-sync": "^2.26.3",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.13.1",
     "node-sass-import": "^2.0.1",
     "nodemon": "^1.18.5",
     "postcss-cli": "^6.0.1",
